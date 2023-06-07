@@ -8,11 +8,7 @@
 
 name: CICD Demo 3
 
-on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+on: [push]
 
 jobs:
   build:
