@@ -24,8 +24,10 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build
-      run: mvn -B package --file java/demo/pom.xml -DskipTests
+      run: mvn build --file java/demo/pom.xml -DskipTests
     - name: Test
       run: mvn --file java/demo/pom.xml test
+    - name: Build docs with Maven
+      run: mvn compile javadoc:javadoc
       
 
